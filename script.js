@@ -22,11 +22,15 @@ function decrement(){
    
     if(counter<=0){
         alertText.innerText='Error : Cannot go below 0';
+        clearBtn.style.display='block';
     }
     //  if counter is greater then zero
     else{
      counter--;
      console.log(counter);
+     if(counter==0){
+        clearBtn.style.display='none'; 
+     }
      counterElement.innerText = counter;}
 }
 function clear(){
@@ -34,6 +38,7 @@ function clear(){
     counter=0;
     console.log(counter);
     counterElement.innerText = counter;
+    clearBtn.style.display='none'; 
 }
 decrementBtn.onclick=decrement;
 incrementBtn.onclick=increment;
