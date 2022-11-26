@@ -6,23 +6,28 @@ var clearBtn = document.getElementById('clear');
 
 var counter = counterElement.innerText;
 var alertText = document.getElementById('alert-text');
-function increment(){
+if(counter == 0){
+clearBtn.style.display='none';}
+
+function increment(){   
     alertText.innerText='';
     counter++;
     console.log(counter);
     counterElement.innerText = counter;
+    clearBtn.style.display='block'; 
+
 }
 function decrement(){
     // if counter is less then 0
-
+   
     if(counter<=0){
         alertText.innerText='Error : Cannot go below 0';
     }
     //  if counter is greater then zero
     else{
-    counter--;
-    console.log(counter);
-    counterElement.innerText = counter;}
+     counter--;
+     console.log(counter);
+     counterElement.innerText = counter;}
 }
 function clear(){
     alertText.innerText='';  
@@ -32,4 +37,5 @@ function clear(){
 }
 decrementBtn.onclick=decrement;
 incrementBtn.onclick=increment;
+
 clearBtn.onclick=clear;
