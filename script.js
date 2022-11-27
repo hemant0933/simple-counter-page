@@ -14,7 +14,7 @@ function increment(){
     counter++;
     console.log(counter);
     counterElement.innerText = counter;
-    clearBtn.style.display='block'; 
+    clearBtn.style.display='inline-block'; 
 
 }
 function decrement(){
@@ -22,7 +22,7 @@ function decrement(){
    
     if(counter<=0){
         alertText.innerText='Error : Cannot go below 0';
-        clearBtn.style.display='block';
+        clearBtn.style.display='inline-block';
     }
     //  if counter is greater then zero
     else{
